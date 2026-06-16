@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_programme_sessions",
+  "info": {
+    "displayName": "Session",
+    "description": "Programme session entry"
+  },
+  "options": {},
+  "attributes": {
+    "time": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "tag": {
+      "type": "string"
+    }
+  }
+}

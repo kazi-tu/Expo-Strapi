@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exhibitors",
+  "info": {
+    "singularName": "exhibitor",
+    "pluralName": "exhibitors",
+    "displayName": "Exhibitor",
+    "description": "Expo exhibitor records"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "logo": {
+      "type": "string"
+    },
+    "booth": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "countryFilter": {
+      "type": "enumeration",
+      "enum": [
+        "china",
+        "kenya",
+        "africa"
+      ]
+    },
+    "origin": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "machinery",
+        "technology",
+        "produce",
+        "health"
+      ]
+    },
+    "business": {
+      "type": "string"
+    },
+    "cardDescription": {
+      "type": "text"
+    },
+    "intro": {
+      "type": "richtext"
+    },
+    "products": {
+      "type": "json"
+    },
+    "services": {
+      "type": "json"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

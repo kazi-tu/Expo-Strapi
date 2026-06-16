@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_units",
+  "info": {
+    "singularName": "support-unit",
+    "pluralName": "support-units",
+    "displayName": "Support Unit",
+    "description": "Support units and institutional partners"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Government",
+        "Industry",
+        "Media"
+      ]
+    },
+    "country": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "logoAlt": {
+      "type": "string"
+    }
+  }
+}

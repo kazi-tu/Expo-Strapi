@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "expo_pages",
+  "info": {
+    "singularName": "expo-page",
+    "pluralName": "expo-pages",
+    "displayName": "Expo Page",
+    "description": "Shared expo page content and settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "theme": {
+      "type": "string"
+    },
+    "dates": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "overviewIntro": {
+      "type": "text"
+    },
+    "overviewBody": {
+      "type": "richtext"
+    },
+    "floorPlan": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "floorPlanUrl": {
+      "type": "string"
+    }
+  }
+}

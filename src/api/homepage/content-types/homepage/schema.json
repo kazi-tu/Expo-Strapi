@@ -1,0 +1,124 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Homepage content for the Agri Africa landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "highlightText": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "topbarTagline": {
+      "type": "string"
+    },
+    "heroEyebrowPrimary": {
+      "type": "string"
+    },
+    "heroEyebrowSecondary": {
+      "type": "string"
+    },
+    "heroPills": {
+      "type": "json"
+    },
+    "organiserLabel": {
+      "type": "string"
+    },
+    "organiserPrimaryLogoUrl": {
+      "type": "string"
+    },
+    "organiserPrimaryLogoAlt": {
+      "type": "string"
+    },
+    "organiserSecondaryTitle": {
+      "type": "string"
+    },
+    "organiserSecondarySubtitle": {
+      "type": "string"
+    },
+    "eventStatus": {
+      "type": "string"
+    },
+    "eventName": {
+      "type": "string"
+    },
+    "eventFullTitle": {
+      "type": "string"
+    },
+    "eventDates": {
+      "type": "string"
+    },
+    "eventVenue": {
+      "type": "string"
+    },
+    "registrationEyebrow": {
+      "type": "string"
+    },
+    "registrationTitle": {
+      "type": "string"
+    },
+    "registrationDates": {
+      "type": "string"
+    },
+    "registrationVenue": {
+      "type": "string"
+    },
+    "registrationBody": {
+      "type": "text"
+    },
+    "footerBrandCopy": {
+      "type": "text"
+    },
+    "partners": {
+      "type": "json"
+    },
+    "socialLinks": {
+      "type": "json"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "legalLeft": {
+      "type": "string"
+    },
+    "legalRight": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

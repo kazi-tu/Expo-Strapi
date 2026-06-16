@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programme_days",
+  "info": {
+    "singularName": "programme-day",
+    "pluralName": "programme-days",
+    "displayName": "Programme Day",
+    "description": "Expo programme day schedule"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dayKey": {
+      "type": "uid",
+      "targetField": "heading",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "hours": {
+      "type": "string"
+    },
+    "sessions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "programme.session"
+    }
+  }
+}
