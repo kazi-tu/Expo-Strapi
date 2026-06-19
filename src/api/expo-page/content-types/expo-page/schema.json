@@ -27,6 +27,15 @@
     "overviewBody": {
       "type": "richtext"
     },
+    "overviewGuests": {
+      "type": "json"
+    },
+    "overviewObjectives": {
+      "type": "json"
+    },
+    "overviewCategories": {
+      "type": "json"
+    },
     "floorPlan": {
       "type": "media",
       "multiple": false,

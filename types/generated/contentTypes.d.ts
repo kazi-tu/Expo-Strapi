@@ -511,7 +511,10 @@ export interface ApiExpoPageExpoPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     overviewBody: Schema.Attribute.RichText;
+    overviewCategories: Schema.Attribute.JSON;
+    overviewGuests: Schema.Attribute.JSON;
     overviewIntro: Schema.Attribute.Text;
+    overviewObjectives: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     theme: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
