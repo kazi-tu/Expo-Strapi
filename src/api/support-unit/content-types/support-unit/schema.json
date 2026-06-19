@@ -42,9 +42,6 @@
         "images"
       ]
     },
-    "logoUrl": {
-      "type": "string"
-    },
     "logoAlt": {
       "type": "string"
     }
