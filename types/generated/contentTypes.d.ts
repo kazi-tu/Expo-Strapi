@@ -440,6 +440,66 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAttendeeAttendee extends Struct.CollectionTypeSchema {
+  collectionName: 'attendees';
+  info: {
+    description: 'Visitor registration records for the expo';
+    displayName: 'Attendee';
+    pluralName: 'attendees';
+    singularName: 'attendee';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    city: Schema.Attribute.String & Schema.Attribute.Required;
+    company: Schema.Attribute.String;
+    consent: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    fullPhoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    gender: Schema.Attribute.Enumeration<['Male', 'Female', 'Rather not say']> &
+      Schema.Attribute.Required;
+    jobTitle: Schema.Attribute.String;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::attendee.attendee'
+    > &
+      Schema.Attribute.Private;
+    otpAttemptCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    otpExpiresAt: Schema.Attribute.DateTime;
+    otpHash: Schema.Attribute.String;
+    otpLastSentAt: Schema.Attribute.DateTime;
+    otpSalt: Schema.Attribute.String;
+    otpUsedAt: Schema.Attribute.DateTime;
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    registeredAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    registrationReference: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    registrationStatus: Schema.Attribute.Enumeration<
+      ['pending-verification', 'verified']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'verified'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiExhibitorExhibitor extends Struct.CollectionTypeSchema {
   collectionName: 'exhibitors';
   info: {
@@ -1165,6 +1225,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::attendee.attendee': ApiAttendeeAttendee;
       'api::exhibitor.exhibitor': ApiExhibitorExhibitor;
       'api::expo-page.expo-page': ApiExpoPageExpoPage;
       'api::homepage.homepage': ApiHomepageHomepage;

@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attendees",
+  "info": {
+    "singularName": "attendee",
+    "pluralName": "attendees",
+    "displayName": "Attendee",
+    "description": "Visitor registration records for the expo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registrationReference": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "registrationStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending-verification",
+        "verified"
+      ],
+      "default": "verified",
+      "required": true
+    },
+    "registeredAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Rather not say"
+      ],
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "countryCode": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "fullPhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "otpHash": {
+      "type": "string"
+    },
+    "otpSalt": {
+      "type": "string"
+    },
+    "otpExpiresAt": {
+      "type": "datetime"
+    },
+    "otpLastSentAt": {
+      "type": "datetime"
+    },
+    "otpAttemptCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "otpUsedAt": {
+      "type": "datetime"
+    }
+  }
+}
